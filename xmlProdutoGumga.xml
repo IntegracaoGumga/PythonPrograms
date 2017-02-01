@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<produto>   
+   <barras>00112233445566</barras>
+   <cest>cestteste</cest>
+   <codif>codifteste</codif>
+   <codigoANP>99998888</codigoANP>
+   <departamento>
+      <categoria>
+         <id>43</id>
+         <nome>AZODRIN 400 - LITRO</nome>
+         <tipoProduto>
+            <id>43</id>
+            <nome>AZODRIN 400 - LITRO</nome>
+         </tipoProduto>
+      </categoria>
+      <id>43</id>
+      <nome>AZODRIN 400 - LITRO</nome>
+   </departamento>
+   <estoque>1</estoque>
+   <grupoFiscalProduto>
+      <id>43</id>
+      <nome>AZODRIN 400 - LITRO</nome>
+   </grupoFiscalProduto>
+   <id>43</id>
+   <ncm>12552459</ncm>
+   <nome>AZODRIN 400 - LITRO</nome>
+   <origem>1</origem>
+   <percentualGasNatural>0</percentualGasNatural>
+   <preco>5.250</preco>
+   <status>True</status>
+   <tipoIpi>ipi</tipoIpi>
+   <vlIpi>0</vlIpi>
+</produto>
