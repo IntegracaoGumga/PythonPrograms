@@ -1,55 +1,19 @@
-import xml2json
-import optparse
-import sys
-import json
-import xml.etree.cElementTree as ET
+import json, xmltodict, sys
 
-options = optparse.Values({"pretty": False})
-
-if len(sys.argv) < 3:
+if len(sys.argv) <> 2:
     print "Numero de parametro esta incorreto"
     exit(1)
 
-ignRootElement = False
-changeSeparetorLabel = False
-
 for i in range(len(sys.argv)):
     if i == 1:
-        #print sys.argv[i]
-        param1 = sys.argv[i]
+        pc_xml = sys.argv[i]
     elif i == 2:
-        #print sys.argv[i]
-        param2 = sys.argv[i]
-    elif i == 3:
-        #print sys.argv[i]
-        param3 = sys.argv[i]
-stringJsonReturn = ""        
-if 'param2' in locals():
-    if param2 == '1':
-        ignRootElement = True
-if 'param3' in locals():
-    changeSeparetorLabel = True
+        pc_force_list = sys.argv[i]
 
-try:
-    stringJson = xml2json.xml2json(param1, options)
-except ET.ParseError as errorConvert:
-    print 'Erro ao tentar converter xml para json, verifique se o xml esta com a syntaxe correta!'
-    print errorConvert.message
-    exit(1)        
+def convert(pc_xml, pc_force_list, xml_attribs=False):
+    with open(pc_xml, "rb") as f:
+        d = xmltodict.parse(f,xml_attribs=xml_attribs,force_list=pc_force_list)
 
-if ignRootElement == True:
-   jsonLoads = json.loads(stringJson)
-   stringMainKey = jsonLoads.keys()[0]
-   stringAux = jsonLoads.__getitem__(stringMainKey)
-   newString = json.dumps(stringAux)
-   if changeSeparetorLabel:
-       stringJsonReturn = newString.replace("\"",param3)
-   else:
-       stringJsonReturn = newString
-else:
-   if changeSeparetorLabel:
-       stringJsonReturn = stringJson.replace("\"",param3)
-   else:
-       stringJsonReturn = stringJson
+    return json.dumps(d, indent=4)
 
-print stringJsonReturn
+print convert(pc_xml, pc_force_list)
