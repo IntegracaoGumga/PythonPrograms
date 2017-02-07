@@ -45,28 +45,27 @@ except ET.ParseError as errorConvert:
 
 stringJsonReturn = json.dumps(dict)
 
-'''
-    try:
-        stringJson = xml2json.xml2json(param1, options)
-    except ET.ParseError as errorConvert:
-        print 'Erro ao tentar converter xml para json, verifique se o xml esta com a syntaxe correta!'
-        print errorConvert.message
-        exit(1)
+try:
+    stringJson = xml2json.xml2json(param1, options)
+except ET.ParseError as errorConvert:
+    print 'Erro ao tentar converter xml para json, verifique se o xml esta com a syntaxe correta!'
+    print errorConvert.message
+    exit(1)
 
-    if ignRootElement == True:
-       jsonLoads = json.loads(stringJson)
-       stringMainKey = jsonLoads.keys()[0]
-       stringAux = jsonLoads.__getitem__(stringMainKey)
-       newString = json.dumps(stringAux)
-       if changeSeparetorLabel:
-           stringJsonReturn = newString.replace("\"",param3)
-       else:
-           stringJsonReturn = newString
-    else:
-       if changeSeparetorLabel:
-           stringJsonReturn = stringJson.replace("\"",param3)
-       else:
-           stringJsonReturn = stringJson
-'''
+if ignRootElement == True:
+   jsonLoads = json.loads(stringJson)
+   stringMainKey = jsonLoads.keys()[0]
+   stringAux = jsonLoads.__getitem__(stringMainKey)
+   newString = json.dumps(stringAux)
+   if changeSeparetorLabel:
+       stringJsonReturn = newString.replace("\"",param3)
+   else:
+       stringJsonReturn = newString
+else:
+   if changeSeparetorLabel:
+       stringJsonReturn = stringJson.replace("\"",param3)
+   else:
+       stringJsonReturn = stringJson
+
 
 print stringJsonReturn
