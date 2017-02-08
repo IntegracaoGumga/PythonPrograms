@@ -1,0 +1,85 @@
+{
+  "operacao": [
+    {
+      "id": 1,
+      "nome": "VENDA"
+    }
+  ],
+  "cofins": {
+    "vBC": "",
+    "vCOFINSST": "",
+    "pCOFINSST": 0,
+    "mensagem": "EMITIDA NOS TERMOS DO ART.350 DO RICMS 45.490/00-SP",
+    "vUnid": "",
+    "pCOFINS": 0,
+    "cst": "1",
+    "vCOFINS": "",
+    "vBCST": ""
+  },
+  "nome": "TRIBUTADOR",
+  "ipi": {
+    "vBC": "",
+    "CST": "53",
+    "pIPI": 0,
+    "vIPI": ""
+  },
+  "destino": [
+    "SP"
+  ],
+  "origem": [
+    "SP"
+  ],
+  "icms": {
+    "pBCOp": 0,
+    "vBCSTRet": "",
+    "pICMSST": 0,
+    "CST": "00",
+    "vBCSTDest": "",
+    "vICMSST": "",
+    "vBC": "",
+    "modBCST": "0",
+    "pICMS": 15,
+    "pMVAST": 0,
+    "pFCPUFDest": 0,
+    "vICMSSTDest": "",
+    "vICMSDif": "",
+    "vICMSDeson": "",
+    "vCredICMSSN": "",
+    "CSOSN": "900",
+    "vBCST": "",
+    "modBC": "1",
+    "pCredSN": 0,
+    "vICMSSTRet": "",
+    "cfop": "5102",
+    "pRedBCST": 0,
+    "pDif": 0,
+    "pRedBC": 0,
+    "pICMSUFDest": 0,
+    "vICMS": "",
+    "pRedICMSSTProp": 0,
+    "vICMSOp": ""
+  },
+  "pis": {
+    "vBC": "",
+    "vPIS": "",
+    "pPIS": 1.65,
+    "pPISST": 0,
+    "mensagem": "EMITIDA NOS TERMOS DO ART.350 DO RICMS 45.490/00-SP",
+    "vPISST": "",
+    "CST": "99",
+    "vBCST": ""
+  },
+  "id": 1,
+  "grupoFiscalProduto": [
+    {
+      "id": 1,
+      "nome": "PRODUTO"
+    }
+  ],
+  "grupoFiscalPessoa": [
+    {
+      "id": 1,
+      "nome": "CLIENTE"
+    }
+  ]
+}
