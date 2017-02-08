@@ -28,18 +28,21 @@ for i in range(len(sys.argv)):
 
 
 def postprocessor(path, key, value):
-    try:
-        return key, int(value)
-    except (ValueError, TypeError):
+    if value == None:
+        return
+    else:
         try:
-            return key, float(value)
+            return key, int(value)
         except (ValueError, TypeError):
-            if value == 'True':
-                return True
-            elif value == 'False':
-                return False
-            else:
-                return key, value
+            try:
+                return key, float(value)
+            except (ValueError, TypeError):
+                if str(value).lower() == 'frue':
+                    return True
+                elif str(value).lower() == 'false':
+                    return False
+                else:
+                    return key, value
 
 # converte o xml em dict e o dict em json
 def convert(pc_xml, xml_attribs=False):
