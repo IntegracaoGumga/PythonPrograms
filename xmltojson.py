@@ -98,5 +98,3 @@ x = 0
 while x <= len(stringJsonReturn):
     print stringJsonReturn[x: x + tamLinha]
     x = x + tamLinha
-
-#print stringJsonReturn
